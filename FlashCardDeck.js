@@ -62,13 +62,13 @@ var viewCloze = function () {
         name: 'cardType',
         message: clozeCardOne.clozeDeleted,
         type: 'input',
-        input: 'George Washington'
+        input: clozeCardOne.cloze
         // once user input is received
     }]).then(function (answer) {
-        if (answer.cardType === 'George Washington'){ 
+        if (answer.cardType === clozeCardOne.cloze){ 
             console.log("Yes! it was " + clozeCardOne.cloze);
            console.log('You are now exiting');
-        } else if (answer.cardType !== 'George Washingtion'){
+        } else if (answer.cardType !== clozeCardOne.cloze){
             console.log("Inncorrect, it was " + clozeCardOne.cloze);
             console.log('exiting');
         }
